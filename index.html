@@ -1,153 +1,236 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>vibex fitness — Feel Good, Look Good. Live Strong.</title>
-  <meta name="description" content="vibex fitness — premium fitness center in Kottayam, Kerala. Opening soon. Feel Good, Look Good. Live Strong." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="assets/logo.jpg" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#top" class="brand">
-        <img src="assets/logo.jpg" alt="vibex fitness logo" class="brand-logo" />
-        <span class="brand-text"><span class="brand-strong">vibe</span><span class="brand-x">x</span> <span class="brand-fit">fitness</span></span>
-      </a>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#location">Location</a>
-        <a href="#contact" class="btn btn-outline">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero" aria-label="Hero">
-      <div class="hero-bg" style="background-image:url('assets/poster.jpg')"></div>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <img src="assets/logo.jpg" alt="vibex fitness logo" class="hero-logo" />
-        <h1 class="tagline-top">FEEL GOOD, LOOK GOOD</h1>
-        <div class="divider"></div>
-        <h2 class="tagline-bottom">LIVE STRONG.</h2>
-        <p class="soon">Opening soon at Thekke Parayil Building, Near Oravakkal–Puthirikkal Road, Kottayam, Kerala</p>
-        <div class="cta-row">
-          <a class="btn btn-solid" href="tel:+919061194525">Call 9061194525</a>
-          <a class="btn btn-outline" href="#waitlist">Get Updates</a>
-        </div>
-
-        <div class="pulse" aria-hidden="true">
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path class="pulse-line" d="M0,60 L200,60 240,20 280,100 320,60 500,60 540,10 580,110 620,60 880,60 920,20 960,100 1000,60 1200,60"></path>
-          </svg>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>vibex fitness — Feel Good, Look Good. Live Strong.</title>
+    <meta
+      name="description"
+      content="vibex fitness — premium fitness center in Kottayam, Kerala. Opening soon. Feel Good, Look Good. Live Strong."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/logo.jpg" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand">
+          <img
+            src="assets/logo.jpg"
+            alt="vibex fitness logo"
+            class="brand-logo"
+          />
+          <span class="brand-text"
+            ><span class="brand-strong">vibe</span
+            ><span class="brand-x">x</span>
+            <span class="brand-fit">fitness</span></span
+          >
+        </a>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#location">Location</a>
+          <a href="#contact" class="btn btn-outline">Contact</a>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section id="about" class="section about">
-      <div class="container grid-2">
-        <div>
-          <h3 class="section-title">What is vibex fitness?</h3>
-          <p>We’re building a modern, performance-driven fitness center in Kottayam with a bold, minimal aesthetic. While construction is underway, we’re finalizing the equipment lineup, training zones, and class schedules so you can hit your goals from day one.</p>
-          <ul class="bullets">
-            <li>Strength & free-weight floor with premium racks and plates</li>
-            <li>Cardio zone with treadmills, bikes, and rowers</li>
-            <li>Functional training & mobility area</li>
-            <li>Locker rooms & shower facilities</li>
-            <li>Personal training & group classes</li>
-          </ul>
-        </div>
-        <div>
-          <div class="notice">
-            <strong>Under construction.</strong> Follow our progress and be first to know about launch dates, early-bird memberships, and opening day events.
-          </div>
-          <form id="waitlist" class="waitlist" onsubmit="return subscribeWaitlist(event)">
-            <h4>Join the waitlist</h4>
-            <label>
-              Name
-              <input type="text" name="name" placeholder="Your name" required />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" placeholder="you@example.com" required />
-            </label>
-            <label>
-              Phone (optional)
-              <input type="tel" name="phone" placeholder="+91…" />
-            </label>
-            <button class="btn btn-solid" type="submit">Notify me</button>
-            <p class="small help">We’ll only use your info to share launch updates for vibex fitness.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery" class="section gallery">
-      <div class="container">
-        <h3 class="section-title">Look & Feel</h3>
-        <figure class="poster-figure">
-          <img src="assets/poster.jpg" alt="vibex fitness poster" />
-          <figcaption>Our design language — clean, bold, and powerful.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section id="location" class="section location">
-      <div class="container grid-2">
-        <div>
-          <h3 class="section-title">Find Us</h3>
-          <p>
-            <strong>Thekke Parayil Building</strong><br/>
-            Near Oravakkal–Puthirikkal Road<br/>
-            Kottayam, Kerala, India — PIN 686019
+    <main id="top">
+      <section class="hero" aria-label="Hero">
+        <div
+          class="hero-bg"
+          style="background-image: url('assets/poster.jpg')"
+        ></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <img
+            src="assets/logo.jpg"
+            alt="vibex fitness logo"
+            class="hero-logo"
+          />
+          <h1 class="tagline-top">FEEL GOOD, LOOK GOOD</h1>
+          <div class="divider"></div>
+          <h2 class="tagline-bottom">LIVE STRONG.</h2>
+          <p class="soon">
+            Opening soon at Thekke Parayil Building, Near Oravakkal–Puthirikkal
+            Road, Kottayam, Kerala
           </p>
-          <p class="muted">Tap for directions or explore the map.</p>
           <div class="cta-row">
-            <a class="btn btn-outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Thekke+Parayil+Building,+Near+Oravakkal%E2%80%93Puthirikkal+Road,+Kottayam,+Kerala+606819">Open in Google Maps</a>
+            <a class="btn btn-solid" href="tel:+919061194525"
+              >Call 9061194525</a
+            >
+            <a class="btn btn-outline" href="#waitlist">Get Updates</a>
+          </div>
+
+          <div class="pulse" aria-hidden="true">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path
+                class="pulse-line"
+                d="M0,60 L200,60 240,20 280,100 320,60 500,60 540,10 580,110 620,60 880,60 920,20 960,100 1000,60 1200,60"
+              ></path>
+            </svg>
           </div>
         </div>
-        <div class="map-wrap" role="region" aria-label="Map showing vibex fitness location">
-          <iframe
-            title="vibex fitness map"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Thekke%20Parayil%20Building,%20Near%20Oravakkal%E2%80%93Puthirikkal%20Road,%20Kottayam,%20Kerala%20606819&output=embed">
-          </iframe>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container grid-2">
+          <div>
+            <h3 class="section-title">What is vibex fitness?</h3>
+            <p>
+              We’re building a modern, performance-driven fitness center in
+              Kottayam with a bold, minimal aesthetic. While construction is
+              underway, we’re finalizing the equipment lineup, training zones,
+              and class schedules so you can hit your goals from day one.
+            </p>
+            <ul class="bullets">
+              <li>
+                Strength & free-weight floor with premium racks and plates
+              </li>
+              <li>Cardio zone with treadmills, bikes, and rowers</li>
+              <li>Functional training & mobility area</li>
+              <li>Locker rooms & shower facilities</li>
+              <li>Personal training & group classes</li>
+            </ul>
+          </div>
+          <div>
+            <div class="notice">
+              <strong>Under construction.</strong> Follow our progress and be
+              first to know about launch dates, early-bird memberships, and
+              opening day events.
+            </div>
+            <form
+              id="waitlist"
+              class="waitlist"
+              onsubmit="return subscribeWaitlist(event)"
+            >
+              <h4>Join the waitlist</h4>
+              <label>
+                Name
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </label>
+              <label>
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </label>
+              <label>
+                Phone (optional)
+                <input type="tel" name="phone" placeholder="+91…" />
+              </label>
+              <button class="btn btn-solid" type="submit">Notify me</button>
+              <p class="small help">
+                We’ll only use your info to share launch updates for vibex
+                fitness.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section gallery">
+        <div class="container">
+          <h3 class="section-title">Look & Feel</h3>
+          <figure class="poster-figure">
+            <img src="assets/poster.jpg" alt="vibex fitness poster" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="location" class="section location">
+        <div class="container grid-2">
+          <div>
+            <h3 class="section-title">Find Us</h3>
+            <p>
+              <strong>Thekke Parayil Building</strong><br />
+              Near Oravakkal–Puthirikkal Road<br />
+              Kottayam, Kerala, India — PIN 686019
+            </p>
+            <p class="muted">Tap for directions or explore the map.</p>
+            <div class="cta-row">
+              <a
+                class="btn btn-outline"
+                target="_blank"
+                rel="noopener"
+                href="https://www.google.com/maps/search/?api=1&query=Thekke+Parayil+Building,+Near+Oravakkal%E2%80%93Puthirikkal+Road,+Kottayam,+Kerala+606819"
+                >Open in Google Maps</a
+              >
+            </div>
+          </div>
+          <div
+            class="map-wrap"
+            role="region"
+            aria-label="Map showing vibex fitness location"
+          >
+            <iframe
+              title="vibex fitness map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="
+           https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d245.85992616516666!2d76.61017068551749!3d9.616023396240104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1755407179389!5m2!1sen!2sin"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container grid-3">
+          <div class="card">
+            <h4>Call</h4>
+            <p>
+              <a href="tel:+919061194525" class="link"
+                >+91&nbsp;90611&nbsp;94525</a
+              >
+            </p>
+          </div>
+          <div class="card">
+            <h4>Website</h4>
+            <p>
+              <a
+                href="https://vibex.fit/"
+                class="link"
+                target="_blank"
+                rel="noopener"
+                >vibex.fit</a
+              >
+            </p>
+          </div>
+          <div class="card">
+            <h4>Address</h4>
+            <p>
+              Thekke Parayil Building, Near Oravakkal–Puthirikkal Road, Kottayam
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> vibex fitness</div>
+        <div class="footer-tagline">
+          <span>FEEL GOOD, LOOK GOOD</span> &nbsp; | &nbsp;
+          <strong>LIVE STRONG.</strong>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <section id="contact" class="section contact">
-      <div class="container grid-3">
-        <div class="card">
-          <h4>Call</h4>
-          <p><a href="tel:+919061194525" class="link">+91&nbsp;90611&nbsp;94525</a></p>
-        </div>
-        <div class="card">
-          <h4>Website</h4>
-          <p><a href="https://vibex.fit/" class="link" target="_blank" rel="noopener">vibex.fit</a></p>
-        </div>
-        <div class="card">
-          <h4>Address</h4>
-          <p>Thekke Parayil Building, Near Oravakkal–Puthirikkal Road, Kottayam</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> vibex fitness</div>
-      <div class="footer-tagline"><span>FEEL GOOD, LOOK GOOD</span> &nbsp; | &nbsp; <strong>LIVE STRONG.</strong></div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
