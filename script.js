@@ -1,6 +1,6 @@
 // ===== vibex fitness waitlist (Apps Script friendly) =====
 // Endpoint already set earlier
-const ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbyDDaTSRNraNLKFxROx2XpdYr9nJuUc8lQdAzziYMqzxKV6MVUYfwIRN0WCabFlyF2Z9Q/exec";
+const ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbywI4nT8sQp-8RumBOoXQ2JlmfB_s02Yvw4-46UQpVAKfg7U4bXH86l5jJNfeH40ny90w/exec";
 
 async function subscribeWaitlist(e){
   e.preventDefault();
