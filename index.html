@@ -8,229 +8,321 @@
       name="description"
       content="vibex fitness — premium fitness center in Kottayam, Kerala. Opening soon. Feel Good, Look Good. Live Strong."
     />
+    <meta name="theme-color" content="#0b0b0b" />
+    <meta property="og:title" content="vibex fitness — Opening soon in Kottayam" />
+    <meta property="og:description" content="Feel Good, Look Good. Live Strong." />
+    <meta property="og:image" content="assets/designs/exterior.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="assets/logo.jpg" />
+    <link rel="preload" as="image" href="assets/designs/exterior.jpg" />
+    <script>
+      // Flag JS early so animated start-states never flash
+      document.documentElement.classList.add("js");
+    </script>
   </head>
   <body>
+    <!-- Preloader -->
+    <div class="loader" aria-hidden="true">
+      <div class="loader-inner">
+        <div class="loader-brand">
+          <span class="brand-strong">vibe</span><span class="brand-x">x</span>
+        </div>
+        <svg class="loader-ecg" viewBox="0 0 300 60" preserveAspectRatio="none">
+          <path d="M0,30 L110,30 122,10 134,52 146,4 158,44 170,30 300,30" />
+        </svg>
+        <div class="loader-count"><span id="loaderCount">0</span>%</div>
+      </div>
+      <div class="loader-panel loader-panel--top"></div>
+      <div class="loader-panel loader-panel--bottom"></div>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
+
     <header class="site-header">
       <div class="container header-inner">
-        <a href="#top" class="brand">
-          <img
-            src="assets/logo.jpg"
-            alt="vibex fitness logo"
-            class="brand-logo"
-          />
+        <a href="#top" class="brand" data-magnetic>
+          <img src="assets/logo.jpg" alt="vibex fitness logo" class="brand-logo" />
           <span class="brand-text"
-            ><span class="brand-strong">vibe</span
-            ><span class="brand-x">x</span>
+            ><span class="brand-strong">vibe</span><span class="brand-x">x</span>
             <span class="brand-fit">fitness</span></span
           >
         </a>
-        <nav class="nav">
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+          <span></span><span></span>
+        </button>
+        <nav class="nav" id="siteNav">
           <a href="#about">About</a>
-          <a href="#gallery">Gallery</a>
+          <a href="#tour">Tour</a>
+          <a href="#zones">Zones</a>
           <a href="#location">Location</a>
-          <a href="#contact" class="btn btn-outline">Contact</a>
+          <a href="#waitlist" class="btn btn-solid" data-magnetic>Join Waitlist</a>
         </nav>
       </div>
     </header>
 
     <main id="top">
+      <!-- HERO -->
       <section class="hero" aria-label="Hero">
-        <div
-          class="hero-bg"
-          style="background-image: url('assets/poster.jpg')"
-        ></div>
+        <div class="hero-media">
+          <img src="assets/designs/exterior.jpg" alt="Night render of the vibex fitness facade at Thekke Parayil Arcade" class="hero-img" />
+        </div>
         <div class="hero-overlay"></div>
+
+        <!-- LED ceiling strips, echoing the interior lighting design -->
+        <svg class="hero-leds" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path class="led led--white" d="M-40,120 H900 Q960,120 960,180 V220 Q960,280 1020,280 H1480" />
+          <path class="led led--red" d="M-40,170 H760 Q810,170 810,220 V260 Q810,320 870,320 H1480" />
+          <path class="led led--orange" d="M1080,-20 L1260,160 M1260,160 L1440,-20 M1260,160 L1260,330" />
+          <path class="led led--white" d="M1480,800 H980 Q920,800 920,740 V700 Q920,640 860,640 H720" />
+        </svg>
+
         <div class="container hero-content">
-          <img
-            src="assets/logo.jpg"
-            alt="vibex fitness logo"
-            class="hero-logo"
-          />
-          <h1 class="tagline-top">FEEL GOOD, LOOK GOOD</h1>
-          <div class="divider"></div>
-          <h2 class="tagline-bottom">LIVE STRONG.</h2>
-          <p class="soon">
-            Opening soon at Thekke Parayil Building, Near Oravakkal–Puthirikkal
-            Road, Kottayam, Kerala
+          <p class="eyebrow hero-eyebrow"><span class="dot"></span> Opening soon · Kottayam, Kerala</p>
+          <h1 class="hero-title">
+            <span class="line"><span class="split">Feel good,</span></span>
+            <span class="line"><span class="split">look good.</span></span>
+            <span class="line line--accent"><span class="split">Live strong.</span></span>
+          </h1>
+          <p class="hero-sub">
+            A bold, performance-driven gym at Thekke Parayil Arcade — red neon, black steel,
+            and everything you need to hit your goals from day one.
           </p>
-          <div class="cta-row">
-            <a class="btn btn-solid" href="tel:+919061194525"
-              >Call 9061194525</a
-            >
-            <a class="btn btn-outline" href="#waitlist">Get Updates</a>
-          </div>
-
-          <div class="pulse" aria-hidden="true">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path
-                class="pulse-line"
-                d="M0,60 L200,60 240,20 280,100 320,60 500,60 540,10 580,110 620,60 880,60 920,20 960,100 1000,60 1200,60"
-              ></path>
-            </svg>
+          <div class="cta-row hero-cta">
+            <a class="btn btn-solid" href="#waitlist" data-magnetic>Get early access</a>
+            <a class="btn btn-ghost" href="tel:+919061194525" data-magnetic>Call 90611 94525</a>
           </div>
         </div>
+
+        <div class="pulse" aria-hidden="true">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path class="pulse-line" d="M0,60 L200,60 240,20 280,100 320,60 500,60 540,10 580,110 620,60 880,60 920,20 960,100 1000,60 1200,60" />
+          </svg>
+        </div>
+
+        <a href="#about" class="scroll-cue" aria-label="Scroll to content">
+          <span>Scroll</span>
+          <i></i>
+        </a>
       </section>
 
+      <!-- MARQUEE -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Strength</span><b>✕</b><span>Cardio</span><b>✕</b><span>Functional</span><b>✕</b><span>Personal Training</span><b>✕</b><span>Group Classes</span><b>✕</b>
+          <span>Strength</span><b>✕</b><span>Cardio</span><b>✕</b><span>Functional</span><b>✕</b><span>Personal Training</span><b>✕</b><span>Group Classes</span><b>✕</b>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
       <section id="about" class="section about">
-        <div class="container grid-2">
-          <div>
-            <h3 class="section-title">What is vibex fitness?</h3>
-            <p>
-              We’re building a modern, performance-driven fitness center in
-              Kottayam with a bold, minimal aesthetic. While construction is
-              underway, we’re finalizing the equipment lineup, training zones,
-              and class schedules so you can hit your goals from day one.
-            </p>
-            <ul class="bullets">
-              <li>
-                Strength & free-weight floor with premium racks and plates
-              </li>
-              <li>Cardio zone with treadmills, bikes, and rowers</li>
-              <li>Functional training & mobility area</li>
-              <li>Locker rooms & shower facilities</li>
-              <li>Personal training & group classes</li>
-            </ul>
-          </div>
-          <div>
-            <div class="notice">
-              <strong>Under construction.</strong> Follow our progress and be
-              first to know about launch dates, early-bird memberships, and
-              opening day events.
-            </div>
-            <form
-              id="waitlist"
-              class="waitlist"
-              onsubmit="return subscribeWaitlist(event)"
-            >
-              <h4>Join the waitlist</h4>
-              <label>
-                Name
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your name"
-                  required
-                />
-              </label>
-              <label>
-                Email
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="you@example.com"
-                  required
-                />
-              </label>
-              <label>
-                Phone (optional)
-                <input type="tel" name="phone" placeholder="+91…" />
-              </label>
-              <button class="btn btn-solid" type="submit">Notify me</button>
-              <p class="small help">
-                We’ll only use your info to share launch updates for vibex
-                fitness.
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section id="gallery" class="section gallery">
         <div class="container">
-          <h3 class="section-title">Look & Feel</h3>
-          <figure class="poster-figure">
-            <img src="assets/poster.jpg" alt="vibex fitness poster" />
-          </figure>
+          <p class="eyebrow reveal">01 — What is vibex fitness</p>
+          <p class="about-statement" data-scrub-words>
+            We’re building a modern, performance-driven fitness center in Kottayam with a bold, minimal aesthetic —
+            premium machines, serious free-weights, and a space designed to make you want to train.
+          </p>
+          <div class="about-grid">
+            <figure class="about-figure reveal-clip">
+              <img src="assets/designs/reception.jpg" alt="Reception design with geometric red-lit desk and vibex fitness wall logo" loading="lazy" data-parallax />
+              <figcaption>Reception &amp; lounge — design render</figcaption>
+            </figure>
+            <div class="about-copy">
+              <div class="notice reveal">
+                <strong>Under construction.</strong> Follow our progress and be first to know about launch dates,
+                early-bird memberships, and opening day events.
+              </div>
+              <ul class="checklist stagger">
+                <li>Strength &amp; free-weight floor with premium racks and plates</li>
+                <li>Cardio zone with treadmills, bikes, and rowers</li>
+                <li>Functional training &amp; mobility area</li>
+                <li>Locker rooms &amp; shower facilities</li>
+                <li>Personal training &amp; group classes</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
+      <!-- HORIZONTAL TOUR -->
+      <section id="tour" class="tour" aria-label="Design tour">
+        <div class="tour-pin">
+          <div class="container tour-head">
+            <p class="eyebrow">02 — Step inside</p>
+            <h2 class="section-title big">The <span class="accent">space</span>, before it opens.</h2>
+          </div>
+          <div class="tour-track">
+            <article class="tour-card">
+              <div class="tour-media"><img src="assets/designs/exterior.jpg" alt="Facade render of Thekke Parayil Arcade with vibex fitness" loading="lazy" /></div>
+              <div class="tour-meta"><span>01</span><h3>The facade</h3><p>Red-and-black diamond cladding with a full-height glass front.</p></div>
+            </article>
+            <article class="tour-card">
+              <div class="tour-media"><img src="assets/designs/reception.jpg" alt="Reception area render" loading="lazy" /></div>
+              <div class="tour-meta"><span>02</span><h3>Reception</h3><p>A sculpted, light-cut front desk and lounge seating.</p></div>
+            </article>
+            <article class="tour-card">
+              <div class="tour-media"><img src="assets/designs/machine-floor.jpg" alt="Machine floor render with neon dumbbell signs" loading="lazy" /></div>
+              <div class="tour-meta"><span>03</span><h3>Machine floor</h3><p>Selectorised stations under flowing LED ceiling lines.</p></div>
+            </article>
+            <article class="tour-card">
+              <div class="tour-media"><img src="assets/designs/strength-zone.jpg" alt="Strength zone render with power racks and platforms" loading="lazy" /></div>
+              <div class="tour-meta"><span>04</span><h3>Strength zone</h3><p>Power racks, functional trainers and lifting platforms.</p></div>
+            </article>
+            <article class="tour-card">
+              <div class="tour-media"><img src="assets/designs/track.jpg" alt="Training track render beside floor-to-ceiling windows" loading="lazy" /></div>
+              <div class="tour-meta"><span>05</span><h3>The track</h3><p>A red-lined walkway past full-height windows and free weights.</p></div>
+            </article>
+          </div>
+          <div class="container tour-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <!-- ZONES -->
+      <section id="zones" class="section zones">
+        <div class="container">
+          <p class="eyebrow reveal">03 — Training zones</p>
+          <h2 class="section-title big reveal">Built for <span class="accent">every</span> goal.</h2>
+          <div class="zone-grid">
+            <article class="zone" data-tilt>
+              <span class="zone-num">01</span>
+              <h3>Strength</h3>
+              <p>Premium racks, plates and benches for serious lifting.</p>
+            </article>
+            <article class="zone" data-tilt>
+              <span class="zone-num">02</span>
+              <h3>Cardio</h3>
+              <p>Treadmills, bikes and rowers with a view.</p>
+            </article>
+            <article class="zone" data-tilt>
+              <span class="zone-num">03</span>
+              <h3>Functional</h3>
+              <p>Open floor for mobility, conditioning and circuits.</p>
+            </article>
+            <article class="zone" data-tilt>
+              <span class="zone-num">04</span>
+              <h3>Coaching</h3>
+              <p>Personal training and group classes to keep you moving.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FULL-BLEED PARALLAX BREAK -->
+      <section class="break" aria-label="Machine floor">
+        <div class="break-media"><img src="assets/designs/machine-floor.jpg" alt="" loading="lazy" /></div>
+        <div class="break-copy container">
+          <h2 class="break-title">
+            <span class="line"><span class="split">No excuses.</span></span>
+            <span class="line line--accent"><span class="split">Just lift.</span></span>
+          </h2>
+        </div>
+      </section>
+
+      <!-- WAITLIST -->
+      <section id="waitlist" class="section signup">
+        <div class="container signup-inner">
+          <div class="signup-copy">
+            <p class="eyebrow reveal">04 — Be first in</p>
+            <h2 class="section-title big reveal">Join the <span class="accent">waitlist</span>.</h2>
+            <p class="muted reveal">
+              Launch dates, early-bird memberships and opening-day events — straight to your inbox.
+            </p>
+          </div>
+          <form class="waitlist reveal" onsubmit="return subscribeWaitlist(event)">
+            <div class="field">
+              <input id="wl-name" type="text" name="name" placeholder=" " required autocomplete="name" />
+              <label for="wl-name">Name</label>
+            </div>
+            <div class="field">
+              <input id="wl-email" type="email" name="email" placeholder=" " required autocomplete="email" />
+              <label for="wl-email">Email</label>
+            </div>
+            <div class="field">
+              <input id="wl-phone" type="tel" name="phone" placeholder=" " autocomplete="tel" />
+              <label for="wl-phone">Phone (optional)</label>
+            </div>
+            <button class="btn btn-solid btn-block" type="submit" data-magnetic>
+              <span class="btn-label">Notify me</span>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="small help">We’ll only use your info to share launch updates for vibex fitness.</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- LOCATION -->
       <section id="location" class="section location">
         <div class="container grid-2">
           <div>
-            <h3 class="section-title">Find Us</h3>
-            <p>
-              <strong>Thekke Parayil Building</strong><br />
+            <p class="eyebrow reveal">05 — Find us</p>
+            <h2 class="section-title big reveal">Thekke Parayil <span class="accent">Arcade</span></h2>
+            <p class="reveal">
+              Thekke Parayil Building<br />
               Near Oravakkal–Puthirikkal Road<br />
               Kottayam, Kerala, India — PIN 686019
             </p>
-            <p class="muted">Tap for directions or explore the map.</p>
-            <div class="cta-row">
+            <div class="cta-row reveal">
               <a
-                class="btn btn-outline"
+                class="btn btn-ghost"
                 target="_blank"
                 rel="noopener"
+                data-magnetic
                 href="https://www.google.com/maps/search/?api=1&query=Thekke+Parayil+Building,+Near+Oravakkal%E2%80%93Puthirikkal+Road,+Kottayam,+Kerala+606819"
-                >Open in Google Maps</a
+                >Open in Google Maps ↗</a
               >
             </div>
           </div>
-          <div
-            class="map-wrap"
-            role="region"
-            aria-label="Map showing vibex fitness location"
-          >
+          <div class="map-wrap reveal-clip" role="region" aria-label="Map showing vibex fitness location">
             <iframe
               title="vibex fitness map"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              src="
-           https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d245.85992616516666!2d76.61017068551749!3d9.616023396240104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1755407179389!5m2!1sen!2sin"
-            >
-            </iframe>
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d245.85992616516666!2d76.61017068551749!3d9.616023396240104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1755407179389!5m2!1sen!2sin"
+            ></iframe>
           </div>
         </div>
       </section>
 
+      <!-- CONTACT -->
       <section id="contact" class="section contact">
-        <div class="container grid-3">
-          <div class="card">
+        <div class="container grid-3 stagger">
+          <a class="card" href="tel:+919061194525">
             <h4>Call</h4>
-            <p>
-              <a href="tel:+919061194525" class="link"
-                >+91&nbsp;90611&nbsp;94525</a
-              >
-            </p>
-          </div>
-          <div class="card">
+            <p>+91&nbsp;90611&nbsp;94525</p>
+            <span class="card-arrow">↗</span>
+          </a>
+          <a class="card" href="https://vibex.fit/" target="_blank" rel="noopener">
             <h4>Website</h4>
-            <p>
-              <a
-                href="https://vibex.fit/"
-                class="link"
-                target="_blank"
-                rel="noopener"
-                >vibex.fit</a
-              >
-            </p>
-          </div>
+            <p>vibex.fit</p>
+            <span class="card-arrow">↗</span>
+          </a>
           <div class="card">
             <h4>Address</h4>
-            <p>
-              Thekke Parayil Building, Near Oravakkal–Puthirikkal Road, Kottayam
-            </p>
+            <p>Thekke Parayil Building, Near Oravakkal–Puthirikkal Road, Kottayam</p>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
+      <div class="footer-mega" aria-hidden="true">vibe<span>x</span></div>
       <div class="container footer-inner">
         <div>© <span id="year"></span> vibex fitness</div>
         <div class="footer-tagline">
-          <span>FEEL GOOD, LOOK GOOD</span> &nbsp; | &nbsp;
-          <strong>LIVE STRONG.</strong>
+          <span>FEEL GOOD, LOOK GOOD</span> &nbsp;|&nbsp; <strong>LIVE STRONG.</strong>
         </div>
       </div>
     </footer>
 
+    <script src="assets/vendor/gsap.min.js"></script>
+    <script src="assets/vendor/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/lenis.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
