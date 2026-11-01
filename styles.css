@@ -237,6 +237,8 @@ a{color:var(--text); text-decoration:none}
 .stat{border:1px solid var(--border); border-radius:18px; padding:1rem 1.2rem; background:rgba(255,255,255,.02)}
 .stat strong{display:block; font-family:var(--display); font-weight:900; font-size:clamp(1.8rem, 4vw, 2.6rem); line-height:1; color:var(--red); text-shadow:0 0 18px var(--red-glow)}
 .stat span{display:block; margin-top:.4rem; font-size:.75rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted)}
+.design-credit{margin:.8rem 0 0; font-size:.75rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted)}
+.design-credit strong{color:var(--brand-cream, #f3eee4); font-weight:600}
 .zones-lede{max-width:46ch; margin:1rem 0 0}
 .checklist{list-style:none; padding:0; margin:0}
 .checklist li{
